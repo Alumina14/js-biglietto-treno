@@ -30,7 +30,7 @@ var anniutente = prompt("Quanti anni hai?");
 
 var prezzobase = kmutente * 0.21;
 
-if (anniutente > 18 && anniutente < 66){
+if (anniutente >= 18 && anniutente < 66){
   prezzofinale = prezzobase;
 } else if ( anniutente < 18 ){
   prezzofinale = prezzobase - ((prezzobase * 20) / 100);
