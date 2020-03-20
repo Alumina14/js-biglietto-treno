@@ -22,12 +22,13 @@ Il programma dovrà chiedere all’utente il numero di chilometri che vuole perc
 
 // calcolare prezzo base del biglietto, il prezzo con sconto per gli over 65 e per i minorenni
 
-var prezzobase = kmutente * 0.21;
 var prezzofinale;
 
-var kmutente = prompt("Quanti km vuoi percorrere?");
+var kmutente = parseInt(prompt("Quanti km vuoi percorrere?"));
 
 var anniutente = prompt("Quanti anni hai?");
+
+var prezzobase = kmutente * 0.21;
 
 if (anniutente > 18 && anniutente < 66){
   prezzofinale = prezzobase;
@@ -37,4 +38,4 @@ if (anniutente > 18 && anniutente < 66){
   prezzofinale = prezzobase - ((prezzobase * 40) / 100);
 }
 
-document.getElementById('idp').innerHTML = "Prezzo biglietto ottenuto" + prezzofinale + " €";
+document.getElementById('idp').innerHTML = "Prezzo biglietto ottenuto " + prezzofinale + " €";
